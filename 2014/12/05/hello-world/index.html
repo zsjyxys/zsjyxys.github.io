@@ -6,19 +6,28 @@
   <title>Hello World | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="hihoCoder Problem 1070: RMQ问题再临
-12345678910111213141516171819202122232425262728293031323334353637383940414243#1070 : RMQ问题再临时间限制:10000ms单点时限:1000ms内存限制:256MB描述终于，小Hi和小Ho踏上了回国的旅程。在飞机上，望着采购来的特产——小Hi陷入了沉">
+标题1
+标题2
+标题3
+12345678910111213141516171819202122232425262728293031323334353637383940414243#1070 : RMQ问题再临时间限制:10000ms单点时限:1000ms内存限制:256MB描述终于，小Hi和小Ho踏上了回国的旅程。在飞机上，望着采购来">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://yoursite.com/2014/12/05/hello-world/">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="hihoCoder Problem 1070: RMQ问题再临
-12345678910111213141516171819202122232425262728293031323334353637383940414243#1070 : RMQ问题再临时间限制:10000ms单点时限:1000ms内存限制:256MB描述终于，小Hi和小Ho踏上了回国的旅程。在飞机上，望着采购来的特产——小Hi陷入了沉">
+标题1
+标题2
+标题3
+12345678910111213141516171819202122232425262728293031323334353637383940414243#1070 : RMQ问题再临时间限制:10000ms单点时限:1000ms内存限制:256MB描述终于，小Hi和小Ho踏上了回国的旅程。在飞机上，望着采购来">
 <meta property="og:image" content="http://beeder.github.io/assets/images/hihoCoder1070.png">
 <meta property="og:image" content="http://beeder.github.io/assets/images/hihoCoder1070-2.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="hihoCoder Problem 1070: RMQ问题再临
-12345678910111213141516171819202122232425262728293031323334353637383940414243#1070 : RMQ问题再临时间限制:10000ms单点时限:1000ms内存限制:256MB描述终于，小Hi和小Ho踏上了回国的旅程。在飞机上，望着采购来的特产——小Hi陷入了沉">
+标题1
+标题2
+标题3
+12345678910111213141516171819202122232425262728293031323334353637383940414243#1070 : RMQ问题再临时间限制:10000ms单点时限:1000ms内存限制:256MB描述终于，小Hi和小Ho踏上了回国的旅程。在飞机上，望着采购来">
 
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -89,6 +98,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p><a href="http://hihocoder.com/problemset/problem/1070" target="_blank" rel="external">hihoCoder Problem 1070: RMQ问题再临</a></p>
+<h1 id="标题1">标题1</h1>
+<h2 id="标题2">标题2</h2>
+<h1 id="标题3">标题3</h1>
 <figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line">#<span class="number">1070</span> : RMQ问题再临</div><div class="line"></div><div class="line">时间限制:<span class="number">10000</span>ms</div><div class="line">单点时限:<span class="number">1000</span>ms</div><div class="line">内存限制:<span class="number">256</span>MB</div><div class="line">描述</div><div class="line">终于，小Hi和小Ho踏上了回国的旅程。在飞机上，望着采购来的特产——小Hi陷入了沉思：还记得在上上周他们去超市的时候，前前后后挑了那么多的东西，都幸运的没有任何其他人（售货员/其他顾客）来打搅他们的采购过程。但是如果发生了这样的事情，他们的采购又会变得如何呢？</div><div class="line"></div><div class="line">于是小Hi便向小Ho提出了这个问题：假设整个货架上从左到右摆放了<span class="keyword">N</span>种商品，并且依次标号为<span class="number">1</span>到<span class="keyword">N</span>，每次小Hi都给出一段区间[L, R]，小Ho要做的是选出标号在这个区间内的所有商品重量最轻的一种，并且告诉小Hi这个商品的重量。但是在这个过程中，可能会因为其他人的各种行为，对某些位置上的商品的重量产生改变（如更换了其他种类的商品），面对这样一个问题，小Ho又该如何解决呢？</div><div class="line"></div><div class="line">提示：平衡乃和谐之理</div><div class="line"></div><div class="line">输入</div><div class="line">每个测试点（输入文件）有且仅有一组测试数据。</div><div class="line"></div><div class="line">每组测试数据的第<span class="number">1</span>行为一个整数<span class="keyword">N</span>，意义如前文所述。</div><div class="line"></div><div class="line">每组测试数据的第<span class="number">2</span>行为<span class="keyword">N</span>个整数，分别描述每种商品的重量，其中第i个整数表示标号为i的商品的重量weight_i。</div><div class="line"></div><div class="line">每组测试数据的第<span class="number">3</span>行为一个整数Q，表示小Hi总共询问的次数与商品的重量被更改的次数之和。</div><div class="line"></div><div class="line">每组测试数据的第<span class="keyword">N</span>+<span class="number">4</span>~<span class="keyword">N</span>+Q+<span class="number">3</span>行，每行分别描述一次操作，每行的开头均为一个属于<span class="number">0</span>或<span class="number">1</span>的数字，分别表示该行描述一个询问和描述一次商品的重量的更改两种情况。对于第<span class="keyword">N</span>+i+<span class="number">3</span>行，如果该行描述一个询问，则接下来为两个整数Li, Ri，表示小Hi询问的一个区间[Li, Ri]；如果该行描述一次商品的重量的更改，则接下来为两个整数<span class="keyword">Pi</span>，Wi，表示位置编号为<span class="keyword">Pi</span>的商品的重量变更为Wi</div><div class="line"></div><div class="line">对于<span class="number">100</span>%的数据，满足<span class="keyword">N</span>&lt;=<span class="number">10</span>^<span class="number">4</span>，Q&lt;=<span class="number">10</span>^<span class="number">4</span>, <span class="number">1</span>&lt;=Li&lt;=Ri&lt;=<span class="keyword">N</span>，<span class="number">1</span>&lt;=<span class="keyword">Pi</span>&lt;=<span class="keyword">N</span>, <span class="number">0</span>&lt;weight_i, Wi&lt;=<span class="number">10</span>^<span class="number">4</span>。</div><div class="line"></div><div class="line">输出</div><div class="line">对于每组测试数据，对于每个小Hi的询问，按照在输入中出现的顺序，各输出一行，表示查询的结果：标号在区间[Li, Ri]中的所有商品中重量最轻的商品的重量。</div><div class="line"></div><div class="line">样例输入</div><div class="line"><span class="number">10</span></div><div class="line"><span class="number">618</span> <span class="number">5122</span> <span class="number">1923</span> <span class="number">8934</span> <span class="number">2518</span> <span class="number">6024</span> <span class="number">5406</span> <span class="number">1020</span> <span class="number">8291</span> <span class="number">2647</span> </div><div class="line"><span class="number">6</span></div><div class="line"><span class="number">0</span> <span class="number">3</span> <span class="number">6</span></div><div class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">2009</span></div><div class="line"><span class="number">0</span> <span class="number">2</span> <span class="number">2</span></div><div class="line"><span class="number">0</span> <span class="number">2</span> <span class="number">10</span></div><div class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">5284</span></div><div class="line"><span class="number">0</span> <span class="number">2</span> <span class="number">5</span></div><div class="line">样例输出</div><div class="line"><span class="number">1923</span></div><div class="line"><span class="number">2009</span></div><div class="line"><span class="number">1020</span></div><div class="line"><span class="number">1923</span></div></pre></td></tr></table></figure>
 
 <p>&emsp;&emsp;本题的数据量比<a href="http://beeder.github.io/2014/12/02/hihocoder-problem-1068-rmq-st-algorithm/" target="_blank" rel="external">hihoCoder Problem 1068: RMQ-ST 算法</a>这题要小，虽然</p>
